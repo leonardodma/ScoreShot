@@ -7,7 +7,7 @@ public class BallController : MonoBehaviour
 
     public InputData inputData;
 
-    public float speed = 10f;
+    public float speed = 8f;
 
     Vector3 _clickedPosition;
 
