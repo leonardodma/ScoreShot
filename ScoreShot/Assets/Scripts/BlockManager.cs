@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlockManager : MonoBehaviour
 {
@@ -24,6 +25,11 @@ public class BlockManager : MonoBehaviour
             HandleBallBeingClicked;
     }
 
+    void Update()
+    {
+        HandleLevelComplete();
+    }
+
     void HandleBlockBeingHit()
     {
         _blockCount--;
@@ -40,5 +46,13 @@ public class BlockManager : MonoBehaviour
         }
 
         _blockCount = blocks.Length;
+    }
+
+    void HandleLevelComplete()
+    {
+        if (_blockCount == 0)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 }
