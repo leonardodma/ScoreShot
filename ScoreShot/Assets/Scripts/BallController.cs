@@ -23,6 +23,8 @@ public class BallController : MonoBehaviour
 
     bool _hitBlock;
 
+    public event Action OnScreenOff;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -32,6 +34,12 @@ public class BallController : MonoBehaviour
     void Update()
     {
         HandleMovement();
+
+        if (!GetComponent<Renderer>().isVisible)
+        {
+            Debug.Log("Ball is off screen");
+            OnScreenOff?.Invoke();
+        }
     }
 
     bool CheckIfHitBlock()

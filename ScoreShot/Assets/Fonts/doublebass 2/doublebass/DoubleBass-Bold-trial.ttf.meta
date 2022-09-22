@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 1e52138da36d03c48a9baa582ad75241
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - DoubleBass Trial
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: da500add7f23cc248a1e31d7456024c7, type: 3}
+  - {fileID: 12800000, guid: 6ad3e10f93529784db050f998f3cf3d7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,11 +7,14 @@ public class BlockManager : MonoBehaviour
 {
     public Block[] blocks;
 
+    public BallController ball;
+
     [SerializeField]
     int _blockCount;
 
     void Start()
     {
+        ball = FindObjectOfType<BallController>();
         blocks = FindObjectsOfType<Block>();
         _blockCount = blocks.Length;
 
@@ -21,13 +24,13 @@ public class BlockManager : MonoBehaviour
             block.OnBeingHit += HandleBlockBeingHit;
         }
 
-        FindObjectOfType<BallController>().OnMouseClick +=
-            HandleBallBeingClicked;
+        ball.OnMouseClick += HandleResetBlocks;
     }
 
     void Update()
     {
         HandleLevelComplete();
+        ball.OnScreenOff += HandleResetBlocks;
     }
 
     void HandleBlockBeingHit()
@@ -35,7 +38,7 @@ public class BlockManager : MonoBehaviour
         _blockCount--;
     }
 
-    void HandleBallBeingClicked()
+    void HandleResetBlocks()
     {
         foreach (Block block in blocks)
         {
