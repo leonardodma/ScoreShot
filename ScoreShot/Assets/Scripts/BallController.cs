@@ -25,6 +25,9 @@ public class BallController : MonoBehaviour
 
     public event Action OnScreenOff;
 
+    [SerializeField] private AudioSource ballHitSoundEffect;
+
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -126,6 +129,7 @@ public class BallController : MonoBehaviour
                     .Reflect(_rb.velocity, other.contacts[0].normal)
                     .normalized;
             _rb.velocity = _direction * speed;
+            ballHitSoundEffect.Play();
         }
     }
 }
