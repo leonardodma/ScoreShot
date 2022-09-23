@@ -10,7 +10,7 @@ To do:
 ---
 
 ## Descrição
-Jogo de puzzle simples em que o desafio é lançar a bola de forma a atingir todos os blocos em cada fase.
+Jogo de puzzle interativo simples e divertido, em que o desafio é lançar a bola de forma a atingir todos os blocos em cada fase.
 
 ## Objetivo
 Atingir todos os blocos da fase
