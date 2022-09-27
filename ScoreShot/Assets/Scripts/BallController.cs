@@ -32,6 +32,8 @@ public class BallController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _ballEffects = GetComponent<BallEffects>();
+        
+        
     }
 
     void Update()
@@ -43,6 +45,9 @@ public class BallController : MonoBehaviour
             Debug.Log("Ball is off screen");
             OnScreenOff?.Invoke();
         }
+
+
+        
     }
 
     bool CheckIfHitBlock()
@@ -50,7 +55,7 @@ public class BallController : MonoBehaviour
         Ray _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D _hit =
             Physics2D
-                .Raycast(_ray.origin, _ray.direction, 100f, layerToCollide);
+                .CircleCast(_ray.origin, 0.2f, _ray.direction, 100f, layerToCollide);
 
         return _hit;
     }
@@ -59,7 +64,7 @@ public class BallController : MonoBehaviour
     {
         if (inputData.isPressed)
         {
-            // Does not spawn ball if ball is on top of a block
+
             _hitBlock = CheckIfHitBlock();
             if (_hitBlock)
             {
@@ -75,6 +80,8 @@ public class BallController : MonoBehaviour
             // Reset the direction and velocity
             transform.position = _clickedPosition;
             _rb.velocity = Vector3.zero;
+
+            // Does not spawn ball if ball is on top of a block
 
             // Spawn the trail
             _ballEffects.SetTrailActive(true);
@@ -132,4 +139,12 @@ public class BallController : MonoBehaviour
             ballHitSoundEffect.Play();
         }
     }
+
+    // void OnDrawGizmos()
+    // {
+    //     // Draw a yellow sphere at the transform's position
+    //     Gizmos.color = Color.yellow;
+    //     Gizmos.DrawSphere(transform.position, 0.2f);
+    // }
+
 }

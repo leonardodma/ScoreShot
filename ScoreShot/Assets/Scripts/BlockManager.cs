@@ -8,12 +8,15 @@ public class BlockManager : MonoBehaviour
     public Block[] blocks;
 
     public BallController ball;
+    [SerializeField] private AudioSource finishedSoundEffect;
+    // [SerializeField] private AudioSource startSoundEffect;
 
     [SerializeField]
     int _blockCount;
 
     void Start()
     {
+        // startSoundEffect.Play();
         ball = FindObjectOfType<BallController>();
         blocks = FindObjectsOfType<Block>();
         _blockCount = blocks.Length;
@@ -55,7 +58,12 @@ public class BlockManager : MonoBehaviour
     {
         if (_blockCount == 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Gol");
         }
+        
+     }
+
+
+
     }
-}
+
