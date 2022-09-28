@@ -26,3 +26,6 @@ https://youtu.be/_i6EN5qr2Es
 
 ### ITCH.IO
 https://itch.io/jam/insper222-projeto1
+
+### Reference
+Most of the code was inspired on the tutorial of following playlist: https://youtube.com/playlist?list=PLG5Njy_Tug4X0tw5vtUBLzAT45Cnoupoa
