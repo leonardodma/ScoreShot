@@ -1,31 +1,23 @@
-# Totó
+# Toto
 
-To do: 
-- [ ] Mudar de volume
-- [ ] Botao voltar nas fases e no level menu
-- [ ] Adicionar "Acabouuuu" ao terminar uma fase
-- [ ] Consertar bug de quando começa em cima de um bloco
-- [ ] Adicionar pop up no level 0 para dar as instruções iniciais
-- [ ] GDD do jogo
----
+### Menus
 
-## Descrição
-Jogo de puzzle interativo simples e divertido, em que o desafio é lançar a bola de forma a atingir todos os blocos em cada fase.
+On the main menu, it is possible to configure the volume of the game, exit, and enter on the level menu. On this menu, it is possible to select the phase you want to play, starting from the easiest phase, until the hardest.
 
-## Objetivo
-Atingir todos os blocos da fase
+### Description
 
-## Mecânicas
-lançamento reto 
+The game consists in throwing a ball to hit all white blocks in one single shot. When it is done, the level is completed.
 
-## Inimigos
+### Objects
 
+Ball: element that can collide with the blocks. If it disappears from the camera, it is necessary to spawn the ball again to retry.
+Blocks: If the ball collides, it will disappear from the scene. If the ball disappears from the camera, it will respawn to try again. 
+Controls
 
-## Perigos
+Click on the screen using the touchpad or left mouse button, to spawn the ball in the same position, and then drag it towards the direction you want to throw (a trail will appear and point in that direction). It is important to know that it is impossible to spawn the ball in the same position that exists a block, or close enough to collide with its border. When you release the button, the ball will start its movement.
 
+### Demo
+https://youtu.be/_i6EN5qr2Es
 
-## Power-up
-
-
-## Aprendizados
-Como lançar a bola 
+### ITCH.IO
+https://itch.io/jam/insper222-projeto1
