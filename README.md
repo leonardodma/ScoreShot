@@ -1,4 +1,9 @@
-# Toto
+# Totó
+
+### Members
+Beatriz Cabral
+
+Leonardo Malta
 
 ### Menus
 
